@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modelos y créditos · Detector Visual</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell credits">
+    <p><a href="./">Volver al detector</a></p>
+    <h1>Modelos y créditos</h1>
+    <p>Los modelos y bibliotecas se descargan del sitio. Las imágenes, los videos, la cámara y los resultados se procesan en tu navegador.</p>
+    <ul>
+      <li>Detección, pose y exportación ONNX con <a href="https://github.com/ultralytics/ultralytics">Ultralytics</a>. Se incluyen los modelos locales de la aplicación de escritorio.</li>
+      <li>Especialistas de placas y armas con sus respectivos <a href="./models/origen-especialistas.json">orígenes y atribuciones</a>.</li>
+      <li>Clasificador temporal R3D-18 de este proyecto, basado en <a href="https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.video.r3d_18.html">Torchvision</a> y entrenado con Surveillance Camera Fight Dataset, de Ş. Aktı, G. A. Tataroğlu y H. K. Ekenel (IPTA 2019).</li>
+      <li><a href="https://github.com/microsoft/onnxruntime">ONNX Runtime Web 1.23.2</a>. <a href="./vendor/ort/LICENSE">Licencia</a> y <a href="./vendor/ort/ThirdPartyNotices.txt">avisos de terceros</a>.</li>
+      <li><a href="https://github.com/google-ai-edge/mediapipe">MediaPipe Tasks Vision 0.10.21</a> y <a href="https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker">Face Landmarker</a>. <a href="./vendor/faces/LICENSE">Licencia</a>.</li>
+      <li><a href="https://github.com/naptha/tesseract.js">Tesseract.js 6.0.1</a> con <a href="https://github.com/tesseract-ocr/tessdata_fast">tessdata_fast</a>. <a href="./vendor/ocr/LICENSE.md">Licencia de Tesseract.js</a> y <a href="./vendor/ocr/LICENSE-tessdata">licencia de los datos OCR</a>.</li>
+      <li><a href="https://www.npmjs.com/package/@ffmpeg/ffmpeg/v/0.12.15">ffmpeg.wasm 0.12.15</a> y <a href="https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v0.12.10">núcleo y fuentes 0.12.10</a> para convertir videos localmente. <a href="./vendor/ffmpeg/LICENSE">Licencia de la interfaz</a> y <a href="./vendor/ffmpeg/COPYING.GPLv2">licencia del núcleo</a>.</li>
+    </ul>
+    <p>Los resultados son estimaciones. Revisa las detecciones y alertas con el video original.</p>
+  </main>
+</body>
+</html>
