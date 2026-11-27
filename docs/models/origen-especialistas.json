@@ -1,0 +1,25 @@
+{
+  "firearms": {
+    "path": "models/specialists/firearms.pt",
+    "source": "https://huggingface.co/Zcket/gun_dtct",
+    "revision": "14270ddcff1296dbd973140c2217dd9c01ad4bd6",
+    "download_url": "https://huggingface.co/Zcket/gun_dtct/resolve/14270ddcff1296dbd973140c2217dd9c01ad4bd6/best.pt",
+    "sha256": "2631a282bc9fe4bf10af87f1ea6a89b2c15f756e22a8c35f24a3e2303243caa6",
+    "size": 6223705,
+    "license": "MIT (model card)",
+    "training_data": "The author reports 16000 images; raw data is not bundled here.",
+    "classes": {"0": "weapon"}
+  },
+  "plates": {
+    "path": "models/specialists/plates.pt",
+    "source": "https://github.com/Muhammad-Zeerak-Khan/Automatic-License-Plate-Recognition-using-YOLOv8",
+    "revision": "c4928a4f8c4ed92a225ee5da963e27f7947ce212",
+    "download_url": "https://raw.githubusercontent.com/Muhammad-Zeerak-Khan/Automatic-License-Plate-Recognition-using-YOLOv8/c4928a4f8c4ed92a225ee5da963e27f7947ce212/license_plate_detector.pt",
+    "sha256": "8ec3b254a6c87610f037a90957462cafa11a9c03224e33a28c6a1d1ac2ac51b0",
+    "size": 6241454,
+    "license": "MIT (source repository); training dataset CC BY 4.0",
+    "dataset": "https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e/dataset/4",
+    "coverage": "Generic vehicle plates, complementing the existing motorcycle detector. Local deployment precision must be evaluated.",
+    "classes": {"license_plate": "license_plate"}
+  }
+}
