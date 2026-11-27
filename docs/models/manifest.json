@@ -1,0 +1,276 @@
+{
+  "models": [
+    {
+      "name": "world-demo",
+      "files": [
+        "world-demo.onnx.part01",
+        "world-demo.onnx.part02",
+        "world-demo.onnx.part03"
+      ],
+      "size": 51277385,
+      "shape": [
+        1,
+        84,
+        18900
+      ],
+      "labels": [
+        "person",
+        "bicycle",
+        "car",
+        "motorcycle",
+        "airplane",
+        "bus",
+        "train",
+        "truck",
+        "boat",
+        "traffic light",
+        "fire hydrant",
+        "stop sign",
+        "parking meter",
+        "bench",
+        "bird",
+        "cat",
+        "dog",
+        "horse",
+        "sheep",
+        "cow",
+        "elephant",
+        "bear",
+        "zebra",
+        "giraffe",
+        "backpack",
+        "umbrella",
+        "handbag",
+        "tie",
+        "suitcase",
+        "frisbee",
+        "skis",
+        "snowboard",
+        "sports ball",
+        "kite",
+        "baseball bat",
+        "baseball glove",
+        "skateboard",
+        "surfboard",
+        "tennis racket",
+        "bottle",
+        "wine glass",
+        "cup",
+        "fork",
+        "knife",
+        "spoon",
+        "bowl",
+        "banana",
+        "apple",
+        "sandwich",
+        "orange",
+        "broccoli",
+        "carrot",
+        "hot dog",
+        "pizza",
+        "donut",
+        "cake",
+        "chair",
+        "couch",
+        "potted plant",
+        "bed",
+        "dining table",
+        "toilet",
+        "tv",
+        "laptop",
+        "mouse",
+        "remote",
+        "keyboard",
+        "cell phone",
+        "microwave",
+        "oven",
+        "toaster",
+        "sink",
+        "refrigerator",
+        "book",
+        "clock",
+        "vase",
+        "scissors",
+        "teddy bear",
+        "hair drier",
+        "toothbrush"
+      ],
+      "live_imgsz": 640,
+      "backend": "world",
+      "imgsz": 960,
+      "confidence": 0.4,
+      "class_confidence": {
+        "cell_phone": 0.28
+      },
+      "class_map": {},
+      "prompts": [
+        "person",
+        "motorcycle",
+        "cell phone",
+        "knife"
+      ]
+    },
+    {
+      "name": "local-entrenado",
+      "files": [
+        "local-entrenado.onnx.part01",
+        "local-entrenado.onnx.part02"
+      ],
+      "size": 37126650,
+      "shape": [
+        1,
+        7,
+        18900
+      ],
+      "labels": [
+        "helmet",
+        "no-helmet",
+        "numberplate"
+      ],
+      "live_imgsz": 640,
+      "backend": "local",
+      "imgsz": 960,
+      "confidence": 0.4,
+      "class_confidence": {
+        "license_plate": 0.35
+      },
+      "class_map": {
+        "helmet": "helmet",
+        "no-helmet": "no_helmet",
+        "numberplate": "license_plate"
+      },
+      "prompts": []
+    },
+    {
+      "name": "pose-conductual",
+      "files": [
+        "pose-conductual.onnx"
+      ],
+      "size": 13240328,
+      "shape": [
+        1,
+        56,
+        8400
+      ],
+      "labels": [
+        "person"
+      ],
+      "live_imgsz": 640,
+      "backend": "pose",
+      "imgsz": 640,
+      "confidence": 0.4,
+      "class_confidence": {},
+      "class_map": {},
+      "prompts": []
+    },
+    {
+      "name": "armas-local-especialista",
+      "files": [
+        "armas-local-especialista.onnx"
+      ],
+      "size": 12092235,
+      "shape": [
+        1,
+        5,
+        18900
+      ],
+      "labels": [
+        "0"
+      ],
+      "live_imgsz": 640,
+      "backend": "local",
+      "imgsz": 960,
+      "confidence": 0.45,
+      "class_confidence": {},
+      "class_map": {
+        "0": "weapon"
+      },
+      "prompts": []
+    },
+    {
+      "name": "placas-autos-motos-local",
+      "files": [
+        "placas-autos-motos-local.onnx"
+      ],
+      "size": 12092218,
+      "shape": [
+        1,
+        5,
+        18900
+      ],
+      "labels": [
+        "license_plate"
+      ],
+      "live_imgsz": 640,
+      "backend": "local",
+      "imgsz": 960,
+      "confidence": 0.4,
+      "class_confidence": {},
+      "class_map": {
+        "license_plate": "license_plate"
+      },
+      "prompts": []
+    }
+  ],
+  "actions": {
+    "files": [
+      "violencia.onnx.part01",
+      "violencia.onnx.part02",
+      "violencia.onnx.part03",
+      "violencia.onnx.part04",
+      "violencia.onnx.part05",
+      "violencia.onnx.part06"
+    ],
+    "size": 132660335,
+    "enabled": true,
+    "labels": [
+      "no_violencia",
+      "violencia_fisica"
+    ],
+    "model_id": "r3d18_violencia_a549482ee1e8e772",
+    "window_seconds": 2.0,
+    "sample_fps": 8,
+    "interval_seconds": 1.0,
+    "min_confidence": 0.5,
+    "max_sample_gap_seconds": 0.5,
+    "alert_labels": [
+      "violencia_fisica"
+    ],
+    "alert_threshold": 0.51,
+    "alert_confirmations": 3,
+    "alert_max_gap_seconds": 3.0,
+    "alert_cooldown_seconds": 15.0
+  },
+  "behavior": {
+    "enabled": true,
+    "keypoint_confidence": 0.5,
+    "max_gap_seconds": 1.5,
+    "raised_seconds": 1.0,
+    "posture_seconds": 0.6,
+    "proximity_ratio": 0.45,
+    "min_raised_arms": 2
+  },
+  "tracking": {
+    "min_iou": 0.2,
+    "max_age_seconds": 2.5
+  },
+  "alerts": {
+    "confirmations": 3,
+    "cooldown_seconds": 15.0,
+    "max_gap_seconds": 3.0,
+    "weapon_confidence": 0.65
+  },
+  "ocr": {
+    "enabled": true,
+    "interval_seconds": 2.0,
+    "confirmations": 2,
+    "min_width": 60,
+    "min_height": 20,
+    "min_confidence": 0.65
+  },
+  "notifications": {
+    "sound_enabled": true,
+    "sound_live_only": true,
+    "banner_seconds": 6.0
+  }
+}
